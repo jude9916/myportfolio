@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="main.css">
+
+    <!-- AlpineJS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/3.8.1/cdn.min.js" defer></script>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body class="primary-bg w-full h-full">
+    <header>
+        <!-- component -->
+        <!-- Slider Component Container -->
+        <div class="flex flex-col items-center justify-center mt-32" x-cloak x-data="appData()" x-init="appInit()">
+            <div class="flex flex-col">
+                <!-- Page Scroll Progress -->
+                <div class="fixed inset-x-0 top-0 z-50 h-0.5 mt-0.5
+            bg-blue-500" :style="`width: ${percent}%`"></div>
+
+                <!-- Navbar -->
+                <nav class="flex justify-around py-4 bg-white/80
+            backdrop-blur-md shadow-md w-full
+            fixed top-0 left-0 right-0 z-10">
+
+                    <!-- Logo Container -->
+                    <div class="flex items-center h-12 w-[7rem]">
+                        <!-- Logo -->
+                        <a class="cursor-pointer">
+                            <img class=" w-full object-cover" src="resourses/jude-logo.svg" alt="Jude Logo">
+                        </a>
+                    </div>
+
+                    <!-- Links Section -->
+                    <div class="items-center hidden space-x-8 lg:flex">
+                        <a class="font-Raleway text-2xl font-semibold flex text-gray-600 hover:text-blue-700
+                    cursor-pointer transition-colors duration-300">
+                            Home
+                        </a>
+
+                        <a class="font-Raleway text-2xl font-semibold  flex text-gray-600 
+                    cursor-pointer transition-colors duration-300 hover:text-blue-700">
+                            Profile
+                        </a>
+
+                        <a class="font-Raleway text-2xl font-semibold  flex text-gray-600 hover:text-blue-700
+                    cursor-pointer transition-colors duration-300">
+                            Experience
+                        </a>
+
+                        <a class="font-Raleway text-2xl font-semibold  flex text-gray-600 hover:text-blue-700
+                    cursor-pointer transition-colors duration-300">
+                            Education
+                        </a>
+
+                        <a class="font-Raleway text-2xl font-semibold  flex text-gray-600 hover:text-blue-700
+                    cursor-pointer transition-colors duration-300">
+                            Skill
+                        </a>
+                    </div>
+
+                    <!-- Icon Menu Section -->
+                    <div class="flex items-center space-x-5">
+                        <!-- Contact Me -->
+                        <!-- <img src="resourses/contact us.png" alt=""> -->
+                        <a href="contact.html" role="button"
+                            class="inline-block rounded bg-gray-500 text-neutral-50 shadow-[0_4px_9px_-4px_rgba(51,45,45,0.7)] hover:bg-gray-600 hover:shadow-[0_8px_9px_-4px_rgba(51,45,45,0.2),0_4px_18px_0_rgba(51,45,45,0.1)] focus:bg-gray-800 focus:shadow-[0_8px_9px_-4px_rgba(51,45,45,0.2),0_4px_18px_0_rgba(51,45,45,0.1)] active:bg-gray-700 active:shadow-[0_8px_9px_-4px_rgba(51,45,45,0.2),0_4px_18px_0_rgba(51,45,45,0.1)] px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal transition duration-150 ease-in-out focus:outline-none focus:ring-0">Contact
+                            Me</a>
+
+                    </div>
+                </nav>
+            </div>
+
+            <!-- Live Pulsing Content -->
+            <div class="flex flex-wrap justify-center items-center">
+                <div class="bg-white h-7 w-48 m-auto text-center rounded-md">
+                    <div class="circle"> </div>
+                    <h2 class="text-base text-black font-medium">Available for Work</h>
+                </div>
+            </div>
+
+            <div class="flex flex-wrap justify-center items-center w-full mt-2">
+                <h1 class="font-Raleway text-white text-6xl">Anthony Jude</h1>
+            </div>
+            <div class="flex flex-wrap justify-center items-center w-full mt-2">
+                <p class="font-Raleway text-white text-lg lg:text-2xl">Web Developer & Cyber
+                    Security Analysts</p>
+            </div>
+            <div class="flex flex-wrap justify-center items-center w-full mt-2">
+                <a href="mailto:jude9916@gmail.com"
+                    class="px-3 py-2 mx-2 text-xs font-medium text-center inline-flex items-center text-white bg-black rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                    <svg class="w-3 h-3 text-white me-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                        fill="currentColor" viewBox="0 0 20 16">
+                        <path
+                            d="m10.036 8.278 9.258-7.79A1.979 1.979 0 0 0 18 0H2A1.987 1.987 0 0 0 .641.541l9.395 7.737Z" />
+                        <path
+                            d="M11.241 9.817c-.36.275-.801.425-1.255.427-.428 0-.845-.138-1.187-.395L0 2.6V14a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V2.5l-8.759 7.317Z" />
+                    </svg>Send Email
+                </a>
+
+                <a href="#"
+                    class="px-3 py-2 mx-2 text-xs font-medium text-center inline-flex items-center text-white bg-black rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                    <ion-icon name="document-text-outline" size="small"></ion-icon>Download CV
+                </a>
+
+            </div>
+
+        </div>
+        <script>
+            const appData = () => {
+                return {
+                    percent: 0,
+
+                    appInit() {
+                        // source: https://codepen.io/A_kamel/pen/qBmmGKJ
+                        window.addEventListener('scroll', () => {
+                            let winScroll = document.body.scrollTop || document.documentElement.scrollTop,
+                                height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+
+                            this.percent = Math.round((winScroll / height) * 100);
+                        });
+                    },
+                };
+            };
+        </script>
+    </header>
+
+
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+<script>
+
+</script>
+
+</html>
